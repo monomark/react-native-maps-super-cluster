@@ -18,7 +18,7 @@ export default class ClusterMarker extends Component {
   render() {
     const pointCount = this.props.properties.point_count // eslint-disable-line camelcase
     const latitude = this.props.geometry.coordinates[1],
-          longitude = this.props.geometry.coordinates[0]
+      longitude = this.props.geometry.coordinates[0]
 
     if (this.props.renderCluster) {
       const cluster = {
@@ -26,10 +26,10 @@ export default class ClusterMarker extends Component {
         coordinate: { latitude, longitude },
         clusterId: this.props.properties.cluster_id,
       }
-      return this.props.renderCluster(cluster, this.onPress)
+      return this.props.renderCluster(cluster, this.onPress, data.props)
     }
 
-    throw "Implement renderCluster method prop to render correctly cluster marker!"
+    throw 'Implement renderCluster method prop to render correctly cluster marker!'
   }
 }
 
