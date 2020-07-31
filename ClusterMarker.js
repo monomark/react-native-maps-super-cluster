@@ -26,7 +26,7 @@ export default class ClusterMarker extends Component {
         coordinate: { latitude, longitude },
         clusterId: this.props.properties.cluster_id,
       }
-      return this.props.renderCluster(cluster, this.onPress, data.props)
+      return this.props.renderCluster(cluster, this.onPress, props)
     }
 
     throw 'Implement renderCluster method prop to render correctly cluster marker!'
